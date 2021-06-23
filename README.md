@@ -2,8 +2,10 @@
   🕵️‍♂️<br>
   Real Time Linting on the Terminal in Next.js
 </h1>
-<p align="center">Currently, ESlint & Stylelint alerts are some not displayed in the terminal on Next.js.</p>
+<p align="center">Currently, eslint-webpack-plugin & stylelint-webpack-plugin some dose not work on Next.js, Use this.</p>
 
+- First Up.
+  - `yarn add node-notifier -D`
 - Command.
   - `node lint.dev`
 
