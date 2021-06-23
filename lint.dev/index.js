@@ -19,7 +19,7 @@ console.info(`${logFontBold}${logFontColorGreen}Stylelint Linting Start...🔍${
   stylelintDev(stylelintCommand, undefined)
 })()
 
-const watcher = watch('./src/', { persistent: true, recursive: true }, async (eventType, filename) => {
+const watcher = watch('./src/', { persistent: true, recursive: true }, (eventType, filename) => {
   console.info(`${logFontBold}${logFontColorCyan}${eventType} files: ${logFontReset}${filename}`)
   eslintDev(eslintCommand, watcher)
   stylelintDev(stylelintCommand, watcher)
