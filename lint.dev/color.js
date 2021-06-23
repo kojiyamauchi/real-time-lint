@@ -1,0 +1,7 @@
+exports.logFontBold = '\x1b[1m'
+exports.logFontBright = '\x1b[1m'
+exports.logFontColorGreen = '\x1b[32m'
+exports.logFontColorCyan = '\u001b[36m'
+exports.logFontColorYellow = '\x1b[33m'
+exports.logFontColorRed = '\x1b[31m'
+exports.logFontReset = '\x1b[0m'
