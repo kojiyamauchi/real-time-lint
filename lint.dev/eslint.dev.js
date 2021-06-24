@@ -56,11 +56,9 @@ exports.eslintDev = async (eslintCommand, watcher) => {
         sound: 'Submarine'
       })
       console.info(`${logFontBold}${logFontColorYellow}${result.stderr}${logFontReset}`)
-      if (watcher) {
-        watcher.close()
-        process.kill(process.pid, 'SIGHUP')
-        process.exit(0)
-      }
+      watcher.close()
+      process.kill(process.pid, 'SIGHUP')
+      process.exit(0)
     }
   } catch (error) {
     notifier.notify({
@@ -70,10 +68,8 @@ exports.eslintDev = async (eslintCommand, watcher) => {
       sound: 'Submarine'
     })
     console.info(`${logFontBold}${logFontColorRed}${error.error}${logFontReset}`)
-    if (watcher) {
-      watcher.close()
-      process.kill(process.pid, 'SIGHUP')
-      process.exit(0)
-    }
+    watcher.close()
+    process.kill(process.pid, 'SIGHUP')
+    process.exit(0)
   }
 }
